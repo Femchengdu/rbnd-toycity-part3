@@ -11,8 +11,12 @@ class Product
 	def self.all
 		@@products
 	end	
-	
-	 private
+
+	def self.find_by_title txt
+		@@products.detect {|find| find.title == txt}
+	end
+
+	private
 
 	def add_to_products
 		if @@products.map{|product| product.title}.include? @title
@@ -21,4 +25,6 @@ class Product
 			@@products << self
 		end	
 	end	
+
 end	
+

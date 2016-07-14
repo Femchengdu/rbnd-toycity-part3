@@ -22,6 +22,11 @@ class Product
 		end
 	end
 
+	def self.in_stock
+		@@products.select {|product_item| product_item.in_stock? == true}
+	end
+
+
 	def self.find_by_title txt
 		@@products.detect {|find| find.title == txt}
 	end

@@ -19,7 +19,7 @@ class Transaction
 	def self.find customer_id
 		@@transactions.detect{|transaction| transaction.id == customer_id}
 	end
-
+	
 	private
 
 	def remove_stock product
@@ -29,5 +29,4 @@ class Transaction
 	def add_transaction
 		@@transactions << self
 	end
-
 end

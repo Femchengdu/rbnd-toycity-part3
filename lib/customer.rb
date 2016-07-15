@@ -4,7 +4,16 @@ class Customer
 
 	def initialize options={}
 		@name = options[:name]
+		@email ||= options[:email]
 		add_customer
+	end
+
+	def email
+		if @email == nil
+			puts "No email available for '#{@name}'!"
+		else
+			@email
+		end
 	end
 
 	def self.all
@@ -33,6 +42,4 @@ class Customer
 			@@customers << self
 		end
 	end
-
-
 end

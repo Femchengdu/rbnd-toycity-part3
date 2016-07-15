@@ -1,5 +1,6 @@
 class Product
 	attr_reader :title, :price
+	attr_writer :brand
 	attr_accessor :stock
 
 	@@products = []
@@ -8,12 +9,21 @@ class Product
 		@title = options[:title]
 		@price = options[:price]
 		@stock = options[:stock]
+		@brand ||= options[:brand]
 		add_to_products
 	end	
 
 	def self.all
 		@@products
 	end	
+
+	def brand
+		if @brand == nil
+			puts "Brand info has not yet been set!"
+		else
+			@brand
+		end
+	end
 
 	def in_stock?
 		if @stock > 0
@@ -41,6 +51,5 @@ class Product
 			@@products << self
 		end	
 	end	
-
 end	
 

@@ -23,7 +23,6 @@ require_relative "lib/transaction"
  puts nanoblock.stock # Should return 12
  puts nanoblock.in_stock? # Should return true
  puts firehouse.in_stock? # Should return false
-
  products_in_stock = Product.in_stock
 # Should return an array of all products with a stock greater than zero
  puts products_in_stock.include?(nanoblock) # Should return true
@@ -63,5 +62,17 @@ require_relative "lib/transaction"
  transaction2 = Transaction.find(2)
  puts transaction2.product == nanoblock # Should return true
 
- walter.purchase(firehouse)
+# walter.purchase(firehouse)
 # Should return OutOfStockError: 'LEGO Firehouse Headquarter' is out of stock.
+
+#  ******* NEW FEATURES ******* #
+
+# Feature 1. Should output message if brand info has not been set without breaking the code
+ nanoblock.brand # should return brand information not yet set
+# Should be able to set the brand info
+ nanoblock.brand = "Nano"
+# Should be able to get the brand info
+ puts nanoblock.brand
+ 
+# Feature 2. Should be able set custorer email during initialization and return message if not available. 
+ puts walter.email # Should return customer email or friendly message.

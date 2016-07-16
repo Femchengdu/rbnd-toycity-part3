@@ -20,8 +20,8 @@ class Transaction
 		@@transactions
 	end
 
-	def self.find customer_id
-		@@transactions.detect{|transaction| transaction.id == customer_id}
+	def self.find id
+		@@transactions.detect{|transaction| transaction.id == id}
 	end
 	
 	private

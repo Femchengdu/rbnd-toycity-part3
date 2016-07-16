@@ -4,12 +4,16 @@ class Transaction
 	@@transactions = []
 
 	def initialize customer, product
-		@@id += 1
-		@id = @@id
-		@product = product
-		@customer = customer
-		remove_stock product
-		add_transaction
+		if product.stock == 0
+			raise OutOfStockError, "'#{product.title}' is out of stock."
+		else
+			@@id += 1
+			@id = @@id
+			@product = product
+			@customer = customer
+			remove_stock product
+			add_transaction
+		end
 	end
 
 	def self.all

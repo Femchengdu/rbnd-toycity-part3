@@ -64,15 +64,3 @@ require_relative "lib/transaction"
 
 # walter.purchase(firehouse)
 # Should return OutOfStockError: 'LEGO Firehouse Headquarter' is out of stock.
-
-#  ******* NEW FEATURES ******* #
-
-# Feature 1. Should output message if brand info has not been set without breaking the code
- nanoblock.brand # should return brand information not yet set
-# Should be able to set the brand info
- nanoblock.brand = "Nano"
-# Should be able to get the brand info
- puts nanoblock.brand
- 
-# Feature 2. Should be able set custorer email during initialization and return message if not available. 
- puts walter.email # Should return customer email or friendly message.

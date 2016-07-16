@@ -1,0 +1,12 @@
+***************** Reflections ******************
+# 
+I learnt a better way to approach solving problems. Breaking down a to problem into smaller bits and then tackling them in a logical manner makes the process of problem solving much easier and faster.
+#
+It took me about 10 hours to complete this task.
+#
+The most rewarding problem I solved was discovering that I needed to use 'self' in calling class methods.
+#
+I added 2 new features: First was an email attribute for the customer because it may be necessary to send a thank you email. This atrribute displays a friendly message when called if the information does not already exist without breaking the application.
+Secondly, I added a brand attribute to the product class with a means to set the attribute and also display a friendly message if the attribute has not been set when it is called.
+#
+I find that I need to learn more about how to work with data sets like arrays and hashes. I am often unaware that there is a faster and easier ruby way to perform the operation I am trying to write code for. This leads to me writing lots of unecessary code.

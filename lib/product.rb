@@ -26,15 +26,11 @@ class Product
 	end
 
 	def in_stock?
-		if @stock > 0
-			return true
-		else
-			return false
-		end
+		@stock > 0
 	end
 
 	def self.in_stock
-		@@products.select {|product_item| product_item.in_stock? == true}
+		@@products.select {|product_item| product_item.in_stock?}
 	end
 
 
